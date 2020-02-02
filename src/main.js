@@ -9,7 +9,7 @@ require('dotenv').config();
 
 Vue.use(PrismicVue, {
   // endpoint: window.prismic.endpoint,
-  endpoint: 'https://alicia-nospace.cdn.prismic.io/api/v2',
+  endpoint: 'https://aneken.cdn.prismic.io/api/v2',
   linkResolver,
   htmlSerializer
 });

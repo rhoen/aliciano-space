@@ -1,18 +1,11 @@
 <template>
   <div class="CollectionWrapper">
-    <ImageComponent
-      v-for="image in fields.images"
-      v-bind:key="image.id"
-      v-bind:src="image.src"
-      v-bind:alt="image.alt"
-      v-bind:left="image.xCoordinate"
-      v-bind:top="image.yCoordinate"
-    />
+
   </div>
 </template>
 
 <script>
-import ImageComponent from './ImageComponent.vue';
+
 const graphQuery = `{
   collection {
     title
@@ -27,12 +20,14 @@ const graphQuery = `{
   }
 }`;
 export default {
-  name: 'CollectionComponent',
+  name: 'Post',
   components: {
-    ImageComponent
+
   },
   props: {
-    collection: String
+    title: String,
+    content: String,
+    imgSrc: String,
   },
   data() {
     return {
@@ -42,10 +37,10 @@ export default {
         description: null,
         images: [],
       }
-    };
+    }
   },
-  created() {
-    this.getContent()
+  created: function() {
+    // this.getContent()
   },
   methods: {
     getContent() {

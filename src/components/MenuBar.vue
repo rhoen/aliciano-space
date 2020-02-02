@@ -1,12 +1,9 @@
 <template>
   <nav role="navigation" :style="cssVars">
-    <h1 v-if="!mobileCollapsed || $mq !== 'mobile'">ALICIA NO</h1>
+    <h1 v-if="!mobileCollapsed || $mq !== 'mobile'">ANEKEN RIVER</h1>
     <ul v-if="!mobileCollapsed || $mq !== 'mobile'">
       <li>
         <a target="_blank" href="https://www.instagram.com/lili_3thousand/">insta</a>
-      </li>
-      <li>
-        <a target="_blank" href="mailto:aliciayesorno@gmail.com">email</a>
       </li>
       <li v-if="$mq === 'mobile'">
         <button v-on:click="toggleMobileCollapsed" class="MenuBar__nav-toggle MenuBar__nav-toggle__collapse" aria-label="hide navigation">
@@ -67,7 +64,7 @@
     color: #aaa;
   }
   .MenuBar__nav-toggle__collapse {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
   }
